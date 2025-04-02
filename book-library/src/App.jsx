@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div>
-      <h1>Book Library</h1>
+      <h1 className="">Book Library</h1>
       <SearchBar />
     </div>
   )
