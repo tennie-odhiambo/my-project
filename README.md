@@ -12,8 +12,8 @@
 
 ## INSTALLATION
 1.cloning the repository
-git clone https://github.com/your-username/book-library-app.git
-cd book-library-app
+git clone https://github.com/your-username/book-library.git
+cd book-library
 
 2.install dependencies
 npm install
