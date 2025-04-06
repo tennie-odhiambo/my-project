@@ -12,7 +12,7 @@ const BookCard = ({ book, onClick }) => {
         onClick={onClick}
         className="bg-secondary rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl dark:bg-gray-800 cursor-pointer"
       >
-        <div className="p-3 h-40 bg-gray-200 dark:bg-white flex items-center justify-center">
+        <div className="p-3 h-40 bg-gray-200 dark:bg-gray-400 flex items-center justify-center">
           <img 
             src={coverUrl} 
             alt={`Cover of ${book.title}`}
