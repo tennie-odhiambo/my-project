@@ -1,33 +1,21 @@
-import { useState } from 'react';
-
-const SearchBar = ({ onSearch }) => {
-  const [query, setQuery] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (query.trim()) {
-      onSearch(query);
-    }
-  };
-
+const SearchBar = ({ query, setQuery, onSearch, onKeyPress }) => {
   return (
-    <form onSubmit={handleSubmit} className="mb-8">
-      <div className="flex shadow-md rounded-lg overflow-hidden">
-        <input
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search for books"
-          className="flex-grow px-4 py-2 focus:outline-none"
-        />
-        <button 
-          type="submit"
-          className="bg-blue-600 text-white px-6 py-2 hover:bg-blue-700 transition-colors"
-        >
-          Search
-        </button>
-      </div>
-    </form>
+    <div className="flex flex-col md:flex-row gap-4">
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        onKeyPress={onKeyPress}
+        placeholder="Search books"
+        className="flex-grow px-5 py-2 border border-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:border-gray-700"
+      />
+      <button
+        onClick={onSearch}
+        className="px-6 py-2 bg-primary text-black rounded-lg hover:bg-secondary hover:text-white transition-colors dark:bg-primary dark:hover:bg-white dark:hover:text-secondary"
+      >
+        Search
+      </button>
+    </div>
   );
 };
 
